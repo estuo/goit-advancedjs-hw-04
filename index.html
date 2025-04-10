@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css"
+    />
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+      }
+      .load-more {
+        display: block;
+        margin: 20px auto;
+      }
+      .is-hidden {
+        display: none;
+      }
+    </style>
+    <script type="module" crossorigin src="/goit-advancedjs-hw-04/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-DnBR8w-b.js">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-CX4EDM7x.css">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-BUEndR1G.css">
+  </head>
+  <body>
+    <form id="search-form" style="text-align: center; margin: 20px;">
+      <input
+        type="text"
+        name="searchQuery"
+        placeholder="Search images..."
+        autocomplete="off"
+        style="padding: 8px; width: 250px;"
+      />
+      <button type="submit" style="padding: 8px 16px;">Search</button>
+    </form>
+
+    <div class="gallery"></div>
+
+    <button class="load-more is-hidden">Load more</button>
+
+  </body>
+</html>
