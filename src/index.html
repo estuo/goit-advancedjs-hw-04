@@ -25,18 +25,24 @@
     </style>
   </head>
   <body>
-    <form id="search-form" style="text-align: center; margin: 20px;">
+    <form
+      id="search-form"
+      class="form"
+      style="text-align: center; margin: 20px"
+    >
       <input
         type="text"
         name="searchQuery"
         placeholder="Search images..."
         autocomplete="off"
-        style="padding: 8px; width: 250px;"
+        style="padding: 8px; width: 250px"
       />
-      <button type="submit" style="padding: 8px 16px;">Search</button>
+      <button type="submit" style="padding: 8px 16px">Search</button>
     </form>
 
-    <div class="gallery"></div>
+    <span class="loader is-hidden"></span>
+
+    <ul class="gallery"></ul>
 
     <button class="load-more is-hidden">Load more</button>
 
