@@ -9,9 +9,11 @@ const loadMoreBtn = document.querySelector('.load-more');
 loadMoreBtn.addEventListener('click', async () => {
   incrementPage();
   const { currentPage, currentQuery, totalPages } = getSearchContext();
+  document.querySelector('.loader').classList.remove('is-hidden');
 
   try {
     const { hits } = await getImages(currentQuery, currentPage);
+    document.querySelector('.loader').classList.add('is-hidden');
     renderGallery(hits);
     smoothScroll();
     if (currentPage >= totalPages) {
@@ -19,6 +21,7 @@ loadMoreBtn.addEventListener('click', async () => {
       showEndMessage();
     }
   } catch (error) {
+    document.querySelector('.loader').classList.add('is-hidden');
     console.error(error);
   }
 });

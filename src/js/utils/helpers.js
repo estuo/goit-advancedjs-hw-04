@@ -12,15 +12,19 @@ export function showEndMessage() {
 export function showNoResultsMessage() {
   iziToast.error({
     title: 'Error',
-    message: 'Sorry, there are no images matching your search query. Please try again!',
+    message:
+      'Sorry, there are no images matching your search query. Please try again!',
     position: 'topRight',
   });
 }
 
 export function smoothScroll() {
-  const { height: cardHeight } = document.querySelector('.gallery').firstElementChild.getBoundingClientRect();
-  window.scrollBy({
-    top: cardHeight * 2,
-    behavior: 'smooth',
-  });
+  const card = document.querySelector('.gallery').firstElementChild;
+  if (card) {
+    const { height: cardHeight } = card.getBoundingClientRect();
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: 'smooth',
+    });
+  }
 }

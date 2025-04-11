@@ -9,35 +9,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css"
     />
-    <style>
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 16px;
-      }
-      .load-more {
-        display: block;
-        margin: 20px auto;
-      }
-      .is-hidden {
-        display: none;
-      }
-    </style>
   </head>
   <body>
-    <form
-      id="search-form"
-      class="form"
-      style="text-align: center; margin: 20px"
-    >
+    <form class="form" id="search-form">
       <input
         type="text"
         name="searchQuery"
         placeholder="Search images..."
         autocomplete="off"
-        style="padding: 8px; width: 250px"
       />
-      <button type="submit" style="padding: 8px 16px">Search</button>
+      <button type="submit">Search</button>
     </form>
 
     <span class="loader is-hidden"></span>
