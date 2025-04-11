@@ -56,3 +56,12 @@
 .is-hidden {
   display: none;
 }
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  width: 100%;
+}
